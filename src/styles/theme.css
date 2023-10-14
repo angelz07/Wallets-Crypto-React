@@ -1,0 +1,643 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #232323; /* Dark theme background */
+    color: #f0f0f0; /* Light text for dark theme */
+}
+
+.container {
+    max-width: 75%; /* Relative width to the viewport */
+    margin: 0 auto; /* Centering the content */
+    padding: 1rem; /* Using rem for spacing */
+}
+
+/* Flexbox for centering content both vertically and horizontally */
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Margin-top for all fields */
+input, button, label, select, textarea, a {
+    margin-top: 0.825rem; /* Using rem for spacing */
+}
+
+.lien_objet_auth{
+    margin-top: 0.825rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.modal-content {
+    max-width: 31.25rem; /* 500px equivalent in rem */
+    width: 100%; /* Already in % */
+    padding: 1.25rem; /* 20px equivalent in rem */
+    border-radius: 0.5rem; /* 8px equivalent in rem */
+    background-color: beige;
+    color: #1a1a1a;
+    box-shadow: 0px 0px 15px rgba(255, 254, 254, 0.2);
+    overflow: scroll;
+}
+
+.notification.success {
+    color: #008000;
+}
+
+.notification.error {
+    color: red;
+}
+
+.notification.warning {
+    color: orange;
+}
+
+.notification.normal {
+    color: #EAEAEA;
+}
+
+/* HEADER */
+.header {
+    background-color: #292929;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    top:30%;
+    width: 100%;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer li {
+    margin: 0.5rem 0;
+}
+
+/* Updated Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Default width of the sidebar */
+    background-color: #2b2b2b; /* Slightly different shade than the main background */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    transition: all 0.3s; /* Smooth transition for showing/hiding */
+    padding: 1rem;
+    z-index: 1000; /* Ensure the sidebar is above other content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow on the right side */
+}
+
+.menu-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    color: #f0f0f0;
+    z-index: 1001; /* Above the sidebar */
+}
+
+.sidebar-close-container {
+    position: relative;
+}
+
+.close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: #f0f0f0;
+}
+
+#user-info {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    align-items: flex-start; /* Aligns items to the left */
+}
+
+#user-info button, #user-info a {
+    width: 95%; /* Takes the full width of the container */
+    text-align: left; /* Aligns text to the left */
+    margin: 0.5rem 0; /* Spacing between buttons and links */
+}
+
+
+
+/* Ajout du style pour l'accordéon */
+
+
+.accordion-title {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.toggle-accordion {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+/* HomeComponent */
+/* Flexbox for centering content both vertically and horizontally */
+.centered-content-homecomponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Commencez le contenu en haut */
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.container_encodage{
+    border: 0.0625rem solid #555; /* Couleur de bordure claire pour contraster avec le fond sombre 1px equivalent in rem */
+    border-radius: 0.3125rem; /* Adoucit les coins de la bordure 5px equivalent in rem*/
+    padding: 1rem; /* Espace entre le contenu et la bordure */
+    margin-top: 1rem; /* Espace entre les éléments pour une meilleure visibilité */
+    margin-bottom: 1rem;
+    background-color: #333;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    min-width: 31.25rem; /* 500px équivalent en rem */
+}
+
+.accordion-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Pour le label "Nom de la crypto" */
+.label_centre {
+    display: inline-block; 
+    min-width: 9.375rem; /* 150px équivalent en rem */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+}
+
+/* Pour l'icône de recherche */
+.search-icon {
+    font-size: 1rem; /* 16px équivalent en rem */
+    margin-left: 0.3125rem; /* 5px équivalent en rem */
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    top: 0.4375rem; /* Ajustez cette valeur selon votre besoin */
+}
+
+#crypto-section-general{
+    display: flex; 
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+    
+}
+
+#crypto-management-section{
+    flex: 1; /* Prend toute la largeur disponible */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.titre_encodage_section{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.search-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#transaction-section{
+    flex: 1; /* Prend toute la largeur disponible */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#crypto-table{
+    border: 0.0625rem solid #555; /* Couleur de bordure claire pour contraster avec le fond sombre 1px equivalent in rem */
+    border-radius: 0.3125rem; /* Adoucit les coins de la bordure 5px equivalent in rem*/
+    padding: 1rem; /* Espace entre le contenu et la bordure */
+    margin-top: 1rem; /* Espace entre les éléments pour une meilleure visibilité */
+    margin-bottom: 1rem;
+    background-color: #333;
+}
+
+#crypto-table-resume{
+    border: 0.0625rem solid #555; /* Couleur de bordure claire pour contraster avec le fond sombre 1px equivalent in rem */
+    border-radius: 0.3125rem; /* Adoucit les coins de la bordure 5px equivalent in rem*/
+    padding: 1rem; /* Espace entre le contenu et la bordure */
+    margin-top: 1rem; /* Espace entre les éléments pour une meilleure visibilité */
+    margin-bottom: 1rem;
+    background-color: #333;
+}
+
+#total-portfolio-chart-container {
+    border: 0.0625rem solid #555; /* Couleur de bordure claire pour contraster avec le fond sombre 1px equivalent in rem */
+    border-radius: 0.3125rem; /* Adoucit les coins de la bordure 5px equivalent in rem*/
+    padding: 1rem; /* Espace entre le contenu et la bordure */
+    margin-top: 1rem; /* Espace entre les éléments pour une meilleure visibilité */
+    margin-bottom: 1rem;
+    background-color: #333;
+}
+
+
+.underTitre{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+/* Styles pour le tableau des cryptomonnaies */
+
+#crypto-table, #crypto-table-resume {
+    width: 95%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#crypto-table th, #crypto-table td, #crypto-table-resume th, #crypto-table-resume td {
+    border: 1px solid #f2f2f2;
+    padding: 8px;
+}
+
+#crypto-table thead, #crypto-table-resume thead {
+    background-color: #221d1d;
+}
+
+/* Taille par défaut du logo */
+#crypto-table img, #crypto-table-resume img {
+    width: 40px; /* ou toute autre taille que vous préférez */
+    align-content: center;
+}
+
+.table-scroll-container {
+    overflow-x: auto; /* Permet le défilement horizontal */
+    width: 90%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le contenu */
+    min-height: 50%;
+}
+
+.table-scroll-container_resume {
+    overflow-x: auto; /* Permet le défilement horizontal */
+    overflow-y:hidden;
+    width: 90%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le contenu */
+    min-height: 20%;
+}
+
+
+.transaction-achat {
+    color: green;
+}
+
+.transaction-vente {
+    color: orange;
+}
+
+.positive {
+    color: green;
+    
+}
+
+.negative {
+    color: red;
+}
+
+
+
+/* Styles pour le modal details crypto */
+
+.modal-content-detail {
+    background-color: #292929; /* Fond similaire à l'en-tête pour une cohérence */
+    border-radius: 0.5rem;
+    overflow: hidden; /* Assurez-vous que le contenu ne déborde pas du modal */
+    max-width: 95%; /* Laissez une marge sur les côtés pour les petits écrans */
+    width: 90%; /* Vous pouvez ajuster cela selon vos préférences */
+    overflow-y: auto;
+    max-height: 80vh; /* Ajustez cette valeur selon vos besoins */
+    
+}
+
+.crypto-details {
+    padding: 1rem; /* Espacement autour du contenu du modal */
+    overflow-x: auto; /* Permet le défilement horizontal */
+    width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le contenu */
+    width: 90%;
+}
+
+.crypto-logo {
+    width: 3rem; /* Réduction de la taille du logo */
+    margin-right: 0.5rem; /* Espacement à droite du logo */
+    border-radius: 50%; /* Rend le logo rond si ce n'est pas déjà le cas */
+}
+
+.delete-button {
+    background-color: #f54242; /* Couleur rouge pour le bouton de suppression */
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem; /* Coins arrondis pour le bouton */
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d41414; /* Assombrir la couleur lorsqu'elle est survolée */
+}
+
+table {
+    width: 100%; /* Assurez-vous que le tableau prend toute la largeur disponible */
+    border-collapse: collapse; /* Fusionne les bordures */
+}
+
+table th, table td {
+    padding: 0.5rem; /* Espacement autour du contenu des cellules */
+    border: 1px solid #f2f2f2; /* Bordure claire pour contraster avec le fond sombre */
+}
+
+table thead {
+    background-color: #1a1a1a; /* Fond légèrement plus foncé pour l'en-tête du tableau */
+}
+
+
+/* Positionnement des éléments dans l'en-tête du modal crypto */
+
+.crypto-header {
+    display: flex; /* Utilisation de Flexbox pour positionner les éléments */
+    justify-content: space-between; /* Espacement maximal entre les éléments */
+    align-items: center; /* Centrer les éléments verticalement */
+    margin-bottom: 1rem; /* Espacement sous l'en-tête */
+    position: relative; /* Permet d'utiliser la position absolue pour le bouton de fermeture */
+}
+
+.crypto-title {
+    flex: 1; /* Prend tout l'espace disponible */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-right: 0.5rem; /* Espacement à droite */
+}
+
+.crypto-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Prend tout l'espace disponible */
+}
+
+
+.crypto-ath-close {
+    flex: 1; /* Prend tout l'espace disponible */
+    display: flex; /* Utilisation de Flexbox pour positionner les éléments */
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: flex-end; /* Alignement des éléments à droite */
+}
+
+.close-modal {
+    margin-bottom: 0.5rem; /* Espacement entre le bouton et l'ATH */
+}
+
+
+
+/* Ajouter ce style pour s'assurer que le conteneur prend 100% de la largeur */
+.container-graphique {
+    width: 90%;
+    max-height: 50rem; /* ou toute autre valeur que vous jugez appropriée */
+    overflow: auto;
+    flex-shrink: 0;
+    min-height: 120%;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+
+.search-results {
+      position: absolute;
+    top: 100%;   /* positionne le conteneur juste en dessous de l'élément d'entrée */
+    left: 0;
+    width: 100%;
+    z-index: 10; /* pour s'assurer qu'il apparaît au-dessus des autres éléments */
+    background-color: #1a1a1a; /* pour s'assurer qu'il n'est pas transparent */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 200px; /* vous pouvez ajuster ceci si nécessaire */
+    overflow-y: auto; /* pour permettre le défilement si de nombreux éléments sont présents */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* pour ajouter une petite ombre, facultatif */
+    overflow-x: scroll;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result-item:hover {
+    background-color: #7a8070;
+}
+
+.crypto-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.crypto-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.crypto-id {
+    margin-right: 10px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.crypto-symbol {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.crypto-price {
+    color: green;
+}
+/* Media Queries for different screen sizes */
+@media (max-width: 75rem) { /* 1200px equivalent in rem */
+    /* Styles for screens smaller than 75rem */
+    .container {
+        padding: 0.625rem; /* Using rem for spacing */
+    }
+}
+
+@media (max-width: 48rem) { /* 768px equivalent in rem */
+    /* Styles for tablet screens */
+    .sidebar {
+        width: 95%; /* Slightly reduced width on smaller screens to prevent overflow */
+        overflow-y: auto; /* Allows vertical scroll if the content is too much */
+    }
+    .container_encodage {
+        
+       
+       
+        font-size: 0.8rem;
+        min-width: 25.25rem; 
+    }
+
+    .search-container, #crypto-management-section, #transaction-section {
+        margin-bottom: 0.5rem;
+    }
+
+    .toggle-accordion {
+        font-size: 1rem;
+    }
+
+    .accordion-title {
+        margin-right: 0.3rem;
+    }
+
+    #crypto-table, #crypto-table-resume {
+        font-size: 1rem;;
+    }
+
+    #crypto-table th[data-sort="invest"] .full-title, 
+    #crypto-table th[data-sort="costPrice"] .full-title, 
+    #crypto-table th[data-sort="currentPrice"] .full-title, 
+    #crypto-table th[data-sort="plDollar"] .full-title, 
+    #crypto-table th[data-sort="plPercent"] .full-title,
+    #crypto-table-resume th .full-title {
+        display: none;
+    }
+
+    #crypto-table th[data-sort="invest"] .abbrev-title, 
+    #crypto-table th[data-sort="costPrice"] .abbrev-title, 
+    #crypto-table th[data-sort="currentPrice"] .abbrev-title, 
+    #crypto-table th[data-sort="plDollar"] .abbrev-title, 
+    #crypto-table th[data-sort="plPercent"] .abbrev-title,
+    #crypto-table-resume th .abbrev-title {
+        display: block;
+    }
+
+    #crypto-table, #crypto-table-resume {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+    }
+
+    #crypto-table img, #crypto-table-resume img {
+        width: 30px; /* Réduit la taille du logo pour les écrans de tablettes */
+        align-content: center;
+    }
+
+    .modal-content-detail {
+        width: 90%; /* Prend presque toute la largeur de l'écran */
+    }
+}
+
+@media (max-width: 30rem) { /* 480px equivalent in rem */
+    /* Styles for mobile screens */
+    .sidebar {
+        width: 95%; /* Slightly reduced width on smaller screens to prevent overflow */
+    }
+
+    .container_encodage {
+        
+      
+        font-size: 0.8rem;
+        min-width: 25.25rem; 
+    }
+
+    .search-container, #crypto-management-section, #transaction-section {
+        margin-bottom: 0.5rem;
+    }
+
+    .toggle-accordion {
+        font-size: 1rem;
+    }
+
+    .accordion-title {
+        margin-right: 0.3rem;
+    }
+    #crypto-table, #crypto-table-resume {
+        font-size: 1rem;
+    }
+
+    #crypto-table, #crypto-table-resume {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+    }
+
+    #crypto-table th[data-sort="invest"] .full-title, 
+    #crypto-table th[data-sort="costPrice"] .full-title, 
+    #crypto-table th[data-sort="currentPrice"] .full-title, 
+    #crypto-table th[data-sort="plDollar"] .full-title, 
+    #crypto-table th[data-sort="plPercent"] .full-title,
+    #crypto-table-resume th .full-title {
+        display: none;
+    }
+
+    #crypto-table th[data-sort="invest"] .abbrev-title, 
+    #crypto-table th[data-sort="costPrice"] .abbrev-title, 
+    #crypto-table th[data-sort="currentPrice"] .abbrev-title, 
+    #crypto-table th[data-sort="plDollar"] .abbrev-title, 
+    #crypto-table th[data-sort="plPercent"] .abbrev-title,
+    #crypto-table-resume th .abbrev-title {
+        display: block;
+    }
+
+    #crypto-table img, #crypto-table-resume img {
+        align-content: center;
+        width: 20px; /* Réduit encore plus la taille du logo pour les écrans mobiles */
+    }
+
+    .crypto-logo {
+        width: 2rem; /* Réduction supplémentaire de la taille du logo */
+    }
+}
+
